@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Aaron Simo — Builder & Engineering Lead</title>
-<meta name="description" content="Aaron Simo — operations leader and full-stack builder. Scales technical teams, builds the systems that let them perform. Selected work: HomeForge, Sodly, gutter.guru, MiLa Test Station." />
+<meta name="description" content="Aaron Simo — operations leader and full-stack builder. Scales technical teams, builds the systems that let them perform. Selected work: HomeForge, Argus, Sodly, gutter.guru, MiLa Test Station." />
 <style>
   :root {
     --bg: #0a0a0b;
@@ -214,6 +214,37 @@
       <article class="card">
         <div class="card-top">
           <div>
+            <h3>Argus</h3>
+            <span class="url">fully-local AI home monitor · self-hosted</span>
+          </div>
+          <span class="badge">AI / inference</span>
+        </div>
+        <p>
+          A fully-local, AI-powered home-monitoring and face-recognition system for Home Assistant —
+          no cloud, everything on your own hardware. Three cooperating services: a <strong>Watcher</strong>
+          that snapshots the home's state every few minutes and asks an LLM "is anything actually wrong?"
+          (a hardened, high-signal prompt with an urgent-push vs. daily-digest policy); a <strong>Recognizer</strong>
+          running InsightFace on CPU, exposing a CodeProject.AI-compatible API to detect and identify faces
+          on-device; and a <strong>Console</strong> that clusters unknown faces by similarity so you name a
+          group once and it learns that person from then on. Pure logic is unit-tested; the container and
+          glue layers are dry-run-verified.
+        </p>
+        <div class="stack">
+          <span class="tag">Python</span>
+          <span class="tag">LLM reasoning loop</span>
+          <span class="tag">InsightFace</span>
+          <span class="tag">On-device / CPU inference</span>
+          <span class="tag">Face recognition</span>
+          <span class="tag">Home Assistant · AppDaemon</span>
+          <span class="tag">Docker / Compose</span>
+          <span class="tag">Flask API</span>
+          <span class="tag">Pytest</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <div>
             <h3>Sodly</h3>
             <span class="url"><a href="https://sodly.dev" target="_blank" rel="noopener">sodly.dev ↗</a></span>
           </div>
@@ -350,9 +381,9 @@
         </p>
         <dl class="kv">
           <dt>now</dt><dd>Lead, US Workshop &amp; Fulfillment Operations @ KRUU US Inc</dd>
-          <dt>building</dt><dd>HomeForge (web + iOS), Sodly, gutter.guru, MiLa Test Station</dd>
+          <dt>building</dt><dd>HomeForge (web + iOS), Argus, Sodly, gutter.guru, MiLa Test Station</dd>
           <dt>background</dt><dd>U.S. Navy avionics (AT2) · Six Sigma · Secret clearance (inactive)</dd>
-          <dt>stack</dt><dd>Supabase / Postgres · Firebase · Vercel · iOS · Raspberry Pi / Python</dd>
+          <dt>stack</dt><dd>Python · LLMs / InsightFace · Docker · Supabase / Postgres · Firebase · Vercel · iOS · Raspberry Pi</dd>
         </dl>
       </div>
     </div>
