@@ -418,5 +418,32 @@
   document.getElementById("yr").textContent = new Date().getFullYear();
 </script>
 
+<!-- lightweight analytics: page views + résumé downloads (Supabase counter) -->
+<script>
+(function () {
+  var SB_URL = "https://rinfbmtvrnpciifjaynv.supabase.co";
+  var SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJpbmZibXR2cm5wY2lpZmpheW52Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjkzNzg1MTcsImV4cCI6MjA4NDk1NDUxN30.QjGLxvc1dSnrVqJVHXOZgx0a3Rd-wq26jM4y6UEhJdc";
+  function bump(counter) {
+    try {
+      fetch(SB_URL + "/rest/v1/rpc/bump_counter", {
+        method: "POST",
+        headers: {
+          "apikey": SB_KEY,
+          "Authorization": "Bearer " + SB_KEY,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ counter_name: counter }),
+        keepalive: true
+      });
+    } catch (e) {}
+  }
+  bump("page");
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("a[href$='AaronSimo_Resume.pdf']");
+    if (a) bump("resume");
+  }, true);
+})();
+</script>
+
 </body>
 </html>
