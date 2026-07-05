@@ -47,6 +47,8 @@
   .nav-links { display: flex; gap: 26px; font-family: var(--mono); font-size: 13px; }
   .nav-links a { color: var(--muted); transition: color .15s; }
   .nav-links a:hover { color: var(--text); }
+  .nav-links .nav-operant { color: var(--accent); }
+  .nav-links .nav-operant:hover { color: var(--accent-dim); }
   @media (max-width: 620px) { .nav-links { display: none; } }
 
   /* hero */
@@ -75,6 +77,17 @@
   .hero-contact a:hover { color: var(--accent); }
   .hero-contact .sep { color: var(--faint); }
   .hero-contact .loc { color: var(--faint); }
+
+  /* featured piece: Operant */
+  .feature { border-bottom: 1px solid var(--line);
+    background: radial-gradient(1100px 380px at 18% -20%, rgba(217,119,87,0.12), transparent 60%), var(--panel); }
+  .feature .wrap { padding: 60px 28px 64px; }
+  .feature .eyebrow { color: var(--accent); margin-bottom: 14px; }
+  .feature-title { font-size: clamp(44px, 9vw, 88px); font-weight: 650; letter-spacing: -0.03em; line-height: 0.98; margin: 4px 0 16px; }
+  .feature-tag { font-size: clamp(17px, 2.6vw, 23px); color: var(--text); font-weight: 500; max-width: 720px; margin-bottom: 16px; }
+  .feature-body { color: var(--muted); font-size: 16px; max-width: 730px; margin-bottom: 26px; }
+  .feature-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 24px; }
+  .feature .btn.primary { font-size: 14px; padding: 13px 24px; }
 
   /* section */
   section { padding: 70px 0; border-bottom: 1px solid var(--line); }
@@ -139,6 +152,7 @@
   <div class="wrap nav-inner">
     <div class="brand">aaron simo<span class="dot">.</span></div>
     <div class="nav-links">
+      <a href="#operant" class="nav-operant">operant</a>
       <a href="#work">work</a>
       <a href="#other">other</a>
       <a href="#about">about</a>
@@ -174,6 +188,34 @@
   </div>
 </header>
 
+<section id="operant" class="feature">
+  <div class="wrap">
+    <div class="eyebrow"><span class="pulse"></span> the centerpiece · a living experiment</div>
+    <h2 class="feature-title">Operant</h2>
+    <p class="feature-tag">A persistent reinforcement-learning organism, shaped forever by everyone who visits.</p>
+    <p class="feature-body">
+      A small learning mind lives on a server and never stops. It moves, it learns, and every visitor who has ever
+      been here has changed it a little, permanently, through reward and punishment. Nothing is ever undone. It's part
+      art installation and part engineering piece, inspired by Sun Yuan &amp; Peng Yu's <em>Can't Help Myself</em> and
+      by simulation theory. Built as a TypeScript monorepo: a framework-agnostic Q-learning core, an always-on
+      simulation host that owns and persists the single agent, and a react-three-fiber 3D view for observers, with the
+      learning core kept strictly decoupled from rendering.
+    </p>
+    <div class="feature-cta">
+      <a class="btn primary" href="operant">Enter Operant →</a>
+      <a class="btn" href="https://github.com/aasimo13/operant" target="_blank" rel="noopener">View the code ↗</a>
+    </div>
+    <div class="stack">
+      <span class="tag">TypeScript</span>
+      <span class="tag">Reinforcement learning · Q-learning</span>
+      <span class="tag">Node.js</span>
+      <span class="tag">React · react-three-fiber</span>
+      <span class="tag">pnpm monorepo</span>
+      <span class="tag">Railway · Vercel</span>
+    </div>
+  </div>
+</section>
+
 <section id="work">
   <div class="wrap">
     <div class="sec-head">
@@ -207,37 +249,6 @@
           <span class="tag">GitHub Actions CI/CD</span>
           <span class="tag">Vercel</span>
           <span class="tag">AI-assisted features</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-top">
-          <div>
-            <h3>Operant</h3>
-            <span class="url"><a href="operant">aaronsimo.com/operant ↗</a> · <a href="https://github.com/aasimo13/operant" target="_blank" rel="noopener">code ↗</a></span>
-          </div>
-          <span class="badge">RL · art · building</span>
-        </div>
-        <p>
-          A persistent reinforcement-learning agent that lives on a server and runs forever. A small learning
-          mind moves and learns inside a space it didn't choose, and every visitor who has ever been there
-          shapes it a little, permanently, through reward and punishment. Nothing is ever undone. It's an art
-          installation and an engineering piece at the same time, inspired by Sun Yuan &amp; Peng Yu's
-          <em>Can't Help Myself</em> and by simulation theory. I built it as a TypeScript monorepo: a
-          framework-agnostic Q-learning core, an always-on simulation host that owns and persists the single
-          agent, and a React + react-three-fiber 3D view for observers. The learning core stays strictly
-          decoupled from the rendering layer, enforced by lint rules rather than good intentions. It's in active
-          development, with an early version live at aaronsimo.com/operant.
-        </p>
-        <div class="stack">
-          <span class="tag">TypeScript</span>
-          <span class="tag">Reinforcement learning</span>
-          <span class="tag">Q-learning</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">React · react-three-fiber</span>
-          <span class="tag">pnpm monorepo</span>
-          <span class="tag">Railway · Vercel</span>
-          <span class="tag">Vitest · GitHub Actions CI</span>
         </div>
       </article>
 
