@@ -9,7 +9,7 @@ showcases selected projects and links to a downloadable resume.
 
 - **Portfolio / landing page** — a dark-themed single page with a sticky nav,
   a short intro, and a section on field work at KRUU US, and a list of selected projects
-  (HomeForge, Argus, Sodly, gutter.guru).
+  (HomeForge, Argus, gutter.guru).
 - **Resume** — a downloadable PDF (`AaronSimo_Resume.pdf`) linked from the page.
   Its source is `resume/resume.html`; rebuild the PDF with `node resume/build.js` (needs Playwright).
 - **KRUU section** — field work at KRUU US, with a 3D shot from the warehouse planner in `img/`.
