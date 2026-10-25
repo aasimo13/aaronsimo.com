@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aaron Simo · Résumé</title>
+<!-- Source for AaronSimo_Resume.pdf. Edit here, then run: node resume/build.js -->
+<style>
+  @page { size: Letter; margin: 0.42in 0.5in; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: #fff; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, "Helvetica Neue", Arial, sans-serif;
+    color: #1d1d20; font-size: 9.15pt; line-height: 1.3; -webkit-font-smoothing: antialiased;
+    max-width: 7.4in; margin: 0 auto;
+  }
+  a { color: inherit; text-decoration: none; }
+  header { border-bottom: 1.5px solid #1d1d20; padding-bottom: 6px; margin-bottom: 6px; }
+  h1 { font-size: 21pt; font-weight: 700; letter-spacing: -0.01em; line-height: 1.1; }
+  .role { font-size: 10.5pt; color: #b85f43; font-weight: 600; margin-top: 2px; }
+  .contact { font-size: 9pt; color: #45454c; margin-top: 4px; }
+  .contact span + span::before { content: "·"; margin: 0 6px; color: #9a9aa3; }
+  h2 {
+    font-size: 8.6pt; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+    color: #b85f43; margin: 9px 0 4px; border-bottom: 0.75px solid #d6d6db; padding-bottom: 2px;
+  }
+  p.summary { color: #2b2b30; }
+  .job { margin-bottom: 5px; break-inside: avoid; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .job-title { font-weight: 700; font-size: 10pt; }
+  .job-org { color: #45454c; }
+  .dates { color: #45454c; font-size: 9pt; white-space: nowrap; }
+  ul { margin: 3px 0 0 14px; }
+  li { margin-bottom: 1.6px; padding-left: 1px; }
+  li::marker { color: #b85f43; }
+  li b, p b { font-weight: 650; color: #111; }
+  .earlier { margin-top: 2px; }
+  .earlier .job-head { margin-bottom: 1px; }
+  .projects li { margin-bottom: 3px; }
+  .skills { display: grid; grid-template-columns: 92px 1fr; gap: 2px 10px; }
+  .skills dt { font-weight: 700; }
+  .creds li { margin-bottom: 1.5px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Aaron Simo</h1>
+  <div class="role">Forward Deployed Engineer · Full Stack Builder · Hardware and Infrastructure</div>
+  <div class="contact">
+    <span>Clinton Township, MI</span>
+    <span><a href="mailto:aasimo13@gmail.com">aasimo13@gmail.com</a></span>
+    <span>586-344-1284</span>
+    <span><a href="https://aaronsimo.com">aaronsimo.com</a></span>
+    <span><a href="https://www.linkedin.com/in/aaron-simo-3a3972244/">LinkedIn</a></span>
+  </div>
+</header>
+
+<h2>Summary</h2>
+<p class="summary">
+  I embed with the people doing the work, find what is slowing them down, and ship the software and hardware that fixes it.
+  I am the on-site technical lead for the US operation of a German photobooth manufacturer, where I own everything from the
+  network and test rigs to the tools the floor runs on, including the IT buildout of a new building. Before that, seven years
+  as a Navy avionics technician and production supervisor. I build and ship full stack products on my own, and I use LLMs and
+  agents (Claude, Claude Code, GPT, Gemini) every day to research, build, and debug.
+</p>
+
+<h2>Experience</h2>
+
+<div class="job">
+  <div class="job-head">
+    <div><span class="job-title">Lead, US Workshop Operations</span> <span class="job-org">· KRUU US Inc., Warren and Shelby Township, MI</span></div>
+    <div class="dates">Sep 2024 to Present</div>
+  </div>
+  <ul>
+    <li><b>On-site technical lead and US point of contact for all IT</b>, working directly with engineering and IT at headquarters in Germany to deploy and support company systems locally.</li>
+    <li><b>Owning the IT and workshop buildout of a new facility:</b> internet cutover across carriers, network and switching at every fulfillment shelf, and bringing the building's inherited access control and camera systems onto the company network.</li>
+    <li><b>Built a 2D/3D warehouse planner</b> (three.js) from the architect's floor plan and LiDAR scans of the empty building. It lays out every shelf, conveyor, and rack, runs the power plan with panel schedules and load checks, and checked the conveyor vendor's 8,990 part CAD model against our layout before install. Packaged so our German site can rebuild it for theirs.</li>
+    <li>Designed the fulfillment shelving layout, its power distribution, and data cabling to every shelf; scoped DC distribution panels and stage style power with outside vendors.</li>
+    <li><b>Built the Raspberry Pi tools the line runs on:</b> a USB mic test station that passes or fails a unit in about 5 seconds, printer test rigs that detect a printer on plug in and run a 10 image QC suite, a self installing DNP photo print server, and a photobooth diagnostic box (24V, USB rails, pedal switch, cable continuity).</li>
+    <li>Put live dashboards on the floor (Metabase kiosks, a mobile fulfillment widget) for throughput, availability, and first pass yield. CAD and 3D printed custom parts for the fleet.</li>
+    <li>Direct a team of up to 8 and $1M to $5M in device inventory; about 2,500 devices a month, peaking at 1,000 a week. Negotiated spare parts access with a printer OEM and shipping insurance terms with UPS Capital.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head">
+    <div><span class="job-title">Aviation Electronics Technician (AT2) and Production Supervisor</span> <span class="job-org">· U.S. Navy</span></div>
+    <div class="dates">Sep 2015 to Jun 2022</div>
+  </div>
+  <ul>
+    <li>Supervised 85 technicians maintaining F/A-18E/F avionics across 15 Electronic Attack squadrons worldwide.</li>
+    <li>Maintenance strategy delivered $79M in cost savings while holding 100% asset availability fleet wide; ran schedules, quality inspections, and system upgrades.</li>
+  </ul>
+</div>
+
+<div class="job earlier">
+  <div class="job-head">
+    <div><span class="job-title">Earlier leadership roles</span> <span class="job-org">· Metro Detroit</span></div>
+    <div class="dates">Oct 2022 to Sep 2024</div>
+  </div>
+  <ul>
+    <li><b>Maintenance Supervisor,</b> TI Fluid Systems (2024) · <b>Electrical Manager,</b> HA Industries, industrial automation (2023 to 2024) · <b>Service Foreman,</b> General RV Center (2022 to 2023). Led maintenance, electrical, and service teams on uptime, preventive maintenance, and turnaround.</li>
+  </ul>
+</div>
+
+<h2>Selected Projects <span style="text-transform:none;letter-spacing:0;font-weight:400;color:#6b6b73;">· built and shipped solo, details at aaronsimo.com</span></h2>
+<ul class="projects">
+  <li><b>HomeForge</b> (homeforge.family): family management app on the web and the App Store. Supabase Postgres with row level security, edge functions, GitHub Actions CI, Apple in-app purchases.</li>
+  <li><b>Argus:</b> fully local AI home monitor: an LLM watcher loop, on-device face recognition (InsightFace), Docker services.</li>
+  <li><b>Sodly</b> (sodly.dev): multi-tenant SaaS for contractors with e-sign, Square payments, and subscriptions; live pilot customer.</li>
+  <li><b>Operant:</b> persistent reinforcement learning agent shaped by every visitor; TypeScript Q-learning core, three.js view.</li>
+  <li><b>gutter.guru:</b> website and CRM a local contracting business runs on.</li>
+</ul>
+
+<h2>Skills and Training</h2>
+<dl class="skills">
+  <dt>AI</dt><dd>LLM integration, agents and tool use, MCP servers, Claude Code, prompt design, local inference</dd>
+  <dt>Software</dt><dd>Python, TypeScript, React, Node, Flask, Postgres / Supabase, Firebase, Docker, GitHub Actions, Vercel, three.js, iOS</dd>
+  <dt>Hardware</dt><dd>Raspberry Pi, GPIO, USB and CUPS printing, networking and switching, access control and camera systems, power distribution, CAD and 3D printing, board level repair</dd>
+  <dt>Training</dt><dd>Aviation Electronics Technician, Naval Air Technical Training Center, Pensacola · Six Sigma · Secret clearance (inactive, expired March 2025)</dd>
+</dl>
+
+
+
+</body>
+</html>

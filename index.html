@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aaron Simo · Builder & Engineering Lead</title>
-<meta name="description" content="Aaron Simo, operations leader and full-stack builder. Leads technical teams and builds the systems that help them move faster. Selected work: HomeForge, Operant, Argus, Sodly, gutter.guru, MiLa Test Station." />
+<title>Aaron Simo · Forward Deployed Engineer &amp; Builder</title>
+<meta name="description" content="Aaron Simo, forward deployed engineer and full-stack builder. On-site technical lead at KRUU US, building the tools, networks, and test rigs operations run on. Selected work: KRUU warehouse planner, HomeForge, Operant, Argus, Sodly." />
 <style>
   :root {
     --bg: #0a0a0b;
@@ -89,6 +89,22 @@
   .feature-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 24px; }
   .feature .btn.primary { font-size: 14px; padding: 13px 24px; }
 
+  /* KRUU section */
+  .kruu-shot { display: block; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--panel); margin-bottom: 14px; }
+  .kruu-shot img { display: block; width: 100%; height: auto; transition: transform .4s ease; }
+  .kruu-shot:hover img { transform: scale(1.012); }
+  .shot-row { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .caption { font-family: var(--mono); font-size: 12px; color: var(--faint); margin: -4px 0 26px; }
+  .kruu-intro { color: var(--muted); font-size: 16px; max-width: 730px; margin-bottom: 28px; }
+  .kruu-intro strong { color: var(--text); font-weight: 600; }
+  .mini-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 18px; }
+  .mini { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; }
+  .mini h4 { font-size: 16px; font-weight: 600; margin-bottom: 6px; display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+  .mini h4 a { font-family: var(--mono); font-size: 11.5px; color: var(--faint); font-weight: 400; }
+  .mini h4 a:hover { color: var(--accent); }
+  .mini p { color: var(--muted); font-size: 14.5px; }
+  @media (max-width: 720px){ .mini-grid { grid-template-columns: 1fr; } }
+
   /* section */
   section { padding: 70px 0; border-bottom: 1px solid var(--line); }
   .sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 38px; }
@@ -152,6 +168,7 @@
   <div class="wrap nav-inner">
     <div class="brand">aaron simo<span class="dot">.</span></div>
     <div class="nav-links">
+      <a href="#kruu">kruu</a>
       <a href="#operant" class="nav-operant">operant</a>
       <a href="#work">work</a>
       <a href="#other">other</a>
@@ -163,17 +180,17 @@
 
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow"><span class="pulse"></span> operations leader · full-stack builder</div>
-    <h1>Aaron Simo.<br /><span class="grey">I scale technical teams and build the systems that let them perform.</span></h1>
+    <div class="eyebrow"><span class="pulse"></span> forward deployed engineer · full-stack builder</div>
+    <h1>Aaron Simo.<br /><span class="grey">I go where the work happens and build what makes it run.</span></h1>
     <p class="lede">
-      I build and ship full-stack products on my own, from the database to the deploy pipeline to the app people
-      actually use. These days I run the US workshop for a photobooth manufacturer and help coordinate fulfillment,
-      so a few thousand devices a month pass through my team, along with the dashboards and test rigs that keep them
-      moving. Before that I spent eight years fixing avionics in the Navy. The thread through all of it is simple
-      enough: I like making things work reliably, and I like building the tools that make the next person's job easier.
+      I'm the on-site technical lead for the US operation of a German photobooth manufacturer. A few thousand devices
+      a month pass through my team, and I build the tools, test rigs, networks, and dashboards they run on, right now
+      including the IT buildout of a new building. I also build and ship full-stack products on my own, and I use AI
+      agents every day to do it. Before all that I spent seven years fixing avionics in the Navy. The thread is simple:
+      I like making things work reliably, and building the thing that makes the next person's job easier.
     </p>
     <div class="hero-cta">
-      <a class="btn primary" href="#work">View work</a>
+      <a class="btn primary" href="#kruu">See the KRUU work</a>
       <a class="btn" href="AaronSimo_Resume.pdf" target="_blank" rel="noopener">View résumé ↗</a>
     </div>
     <div class="hero-contact">
@@ -187,6 +204,78 @@
     </div>
   </div>
 </header>
+
+<section id="kruu">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <span class="sec-title">In the field · KRUU US</span>
+    </div>
+    <p class="kruu-intro">
+      My day job is the closest thing to forward deployed engineering I know of. I'm the person on site who makes the
+      technology work for a real operation, working with engineering and IT at headquarters in Germany. Here's a slice of what I've built there.
+    </p>
+
+    <a class="kruu-shot" href="img/kruu-warehouse-3d.webp" target="_blank" rel="noopener">
+      <img src="img/kruu-warehouse-3d.webp" width="1600" height="891" decoding="async"
+           alt="3D model of the new KRUU US warehouse showing shipping shelves, check and clean rows, conveyors, racks, and building steel, merged with phone scans of the real floor" />
+    </a>
+    <p class="caption">The warehouse planner's 3D view: CAD layout merged with phone scans of the empty building.</p>
+
+    <article class="card">
+      <div class="card-top">
+        <div>
+          <h3>Warehouse planner, 2D + 3D</h3>
+          <span class="url">new facility buildout · used by the KRUU US team</span>
+        </div>
+        <span class="badge ship">in use</span>
+      </div>
+      <p>
+        When we took a new building, I built the tool we planned it in. It's one page with a 2D floor plan and a 3D
+        view, built from the architect's PDF and LiDAR scans of the empty building. It lays out shipping
+        shelves, check and clean rows, conveyors, racks, and building steel, and it runs the power plan with panel
+        schedules and load checks plus a data port plan, with PDF, PNG, and Excel exports. It also loads the conveyor
+        vendor's own CAD model (8,990 parts from their STEP file) so we could check their layout against ours before
+        anything was installed. I packaged it so our German site can rebuild it for their warehouse.
+      </p>
+      <div class="stack">
+        <span class="tag">three.js</span>
+        <span class="tag">LiDAR scans · glTF</span>
+        <span class="tag">STEP to mesh</span>
+        <span class="tag">PDF floor plan parsing</span>
+        <span class="tag">Power &amp; load calcs</span>
+        <span class="tag">Python tooling</span>
+      </div>
+    </article>
+
+    <div class="mini-grid">
+      <div class="mini">
+        <h4>Facility IT buildout</h4>
+        <p>I own IT and workshop for the move: internet cutover, network and switching to every fulfillment shelf, bringing the building's inherited access control and camera systems onto our network, and the shelving layout, power distribution, and cabling.</p>
+      </div>
+      <div class="mini">
+        <h4>MiLa test station</h4>
+        <p>Raspberry Pi pass/fail rig for USB microphone units. Plays a frequency sweep, records it back, and validates the capture in about five seconds, with auto plug-in triggering, LED and beep output, and self-calibration.</p>
+      </div>
+      <div class="mini">
+        <h4>Printer test rigs <a href="https://github.com/aasimo13/PRig" target="_blank" rel="noopener">code ↗</a></h4>
+        <p>Plug in a DNP or Canon SELPHY printer and the rig detects it over USB and runs a 10 image QC suite (color, resolution, text, edge bleed) with a live web dashboard. Headless, with a one command reset for the floor.</p>
+      </div>
+      <div class="mini">
+        <h4>DNP print server <a href="https://github.com/aasimo13/kruu-print-server-dnp" target="_blank" rel="noopener">code ↗</a></h4>
+        <p>Pi based photo print station: drag photos into a web page or a shared folder and they print at 4x6, 4x4, or cut strips. One command installer that detects the printer and user on its own.</p>
+      </div>
+      <div class="mini">
+        <h4>Photobooth Test Box</h4>
+        <p>A diagnostic box for the fleet that checks the 24V supply, USB voltages, the pedal switch, and cable continuity, so a tech can find a fault in minutes instead of swapping parts.</p>
+      </div>
+      <div class="mini">
+        <h4>Floor dashboards &amp; parts</h4>
+        <p>Metabase dashboards on Pi kiosk screens and a mobile fulfillment widget for live throughput and first pass yield. CAD and 3D printed parts for the fleet, like a retention clip for the DNP printers.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="operant" class="feature">
   <div class="wrap">
@@ -219,7 +308,7 @@
 <section id="work">
   <div class="wrap">
     <div class="sec-head">
-      <span class="sec-num">01</span>
+      <span class="sec-num">02</span>
       <span class="sec-title">Projects</span>
     </div>
 
@@ -330,29 +419,6 @@
         </div>
       </article>
 
-      <article class="card">
-        <div class="card-top">
-          <div>
-            <h3>MiLa Test Station</h3>
-            <span class="url">hardware + software · automated QA</span>
-          </div>
-          <span class="badge">test automation</span>
-        </div>
-        <p>
-          A Raspberry Pi automated pass/fail test rig for USB microphone units. It plays a frequency sweep,
-          records it back, and validates the capture in about five seconds, with automated plug-in triggering,
-          GPIO LED/beep output, and a self-calibration routine. I built it to make device validation fast,
-          repeatable, and hard to get wrong on a busy line.
-        </p>
-        <div class="stack">
-          <span class="tag">Raspberry Pi</span>
-          <span class="tag">Python</span>
-          <span class="tag">GPIO</span>
-          <span class="tag">Audio DSP / signal validation</span>
-          <span class="tag">Automated QA</span>
-          <span class="tag">Self-calibration</span>
-        </div>
-      </article>
 
     </div>
   </div>
@@ -361,21 +427,17 @@
 <section id="other">
   <div class="wrap">
     <div class="sec-head">
-      <span class="sec-num">02</span>
+      <span class="sec-num">03</span>
       <span class="sec-title">Also built</span>
     </div>
     <div class="otherlist">
       <div class="row">
-        <div class="name">Custom test fixtures <span class="u">KRUU workshop</span></div>
-        <div class="desc">Pass/fail test rigs and fixtures for the production line beyond MiLa, built to standardize validation and speed things up.</div>
+        <div class="name">Kova <span class="u">self-hosted agent</span></div>
+        <div class="desc">A self-hosted AI agent on Open WebUI wired to the Anthropic API, deployed on Render.</div>
       </div>
       <div class="row">
-        <div class="name">Internal dashboards <span class="u">ops tooling</span></div>
-        <div class="desc">Real-time dashboards giving the team visibility into device availability, throughput, and first-pass yield.</div>
-      </div>
-      <div class="row">
-        <div class="name">Hardware &amp; 3D printing <span class="u">maker</span></div>
-        <div class="desc">Designed printable parts and device enclosures to spec, tuned print profiles, and did board-level repair and soldering work.</div>
+        <div class="name">AI-assisted research <span class="u">side projects</span></div>
+        <div class="desc">I use Claude agents to take open questions from idea to checked result: lit review, code, proofs, and stress tests. Write-ups coming here.</div>
       </div>
       <div class="row">
         <div class="name">Experiments <span class="u">prototypes</span></div>
@@ -388,7 +450,7 @@
 <section id="about">
   <div class="wrap about">
     <div class="sec-head">
-      <span class="sec-num">03</span>
+      <span class="sec-num">04</span>
       <span class="sec-title">About</span>
     </div>
     <div class="stats">
@@ -406,10 +468,10 @@
           and keep things reliable.
         </p>
         <p>
-          Right now I lead workshop operations at KRUU US, a German-owned photobooth manufacturer, and I also
-          coordinate fulfillment. I direct a team of up to eight people, we move around 2,500 devices a month, and
+          Right now I lead workshop operations at KRUU US, a German-owned photobooth manufacturer, and I'm the US
+          point of contact for all IT. I direct a team of up to eight people, we move around 2,500 devices a month, and
           I've built the repair workflows, test fixtures, and dashboards that raised our first-pass yield and gave
-          everyone a live view of throughput. Before KRUU I spent eight years in the U.S. Navy as an aviation
+          everyone a live view of throughput. I'm also running the IT buildout of our new building. Before KRUU I spent seven years in the U.S. Navy as an aviation
           electronics technician and production supervisor, where I supervised 85 technicians keeping F/A-18E/F
           avionics running across 15 squadrons. Our maintenance work helped save $79M while holding 100% fleet
           availability.
@@ -422,9 +484,9 @@
         </p>
         <dl class="kv">
           <dt>now</dt><dd>Lead, US Workshop Operations @ KRUU US Inc</dd>
-          <dt>building</dt><dd>HomeForge (web + iOS), Operant, Argus, Sodly, gutter.guru, MiLa Test Station</dd>
+          <dt>building</dt><dd>KRUU warehouse planner, HomeForge (web + iOS), Operant, Argus, Sodly, gutter.guru</dd>
           <dt>background</dt><dd>U.S. Navy avionics (AT2) · Six Sigma · Secret clearance (inactive)</dd>
-          <dt>stack</dt><dd>Python · TypeScript / React · LLMs &amp; RL · Docker · Supabase / Postgres · Firebase · Vercel · iOS · Raspberry Pi</dd>
+          <dt>stack</dt><dd>Python · TypeScript / React · three.js · LLMs, agents &amp; MCP · Docker · Supabase / Postgres · Firebase · Vercel · iOS · Raspberry Pi · networking</dd>
         </dl>
       </div>
     </div>
@@ -434,10 +496,10 @@
 <section id="contact">
   <div class="wrap">
     <div class="sec-head">
-      <span class="sec-num">04</span>
+      <span class="sec-num">05</span>
       <span class="sec-title">Contact</span>
     </div>
-    <p class="lede" style="margin-bottom:6px;">Open to engineering and engineering-leadership roles. Based in Clinton Township, MI. The fastest way to reach me:</p>
+    <p class="lede" style="margin-bottom:6px;">Open to forward deployed engineering and applied AI roles, and engineering leadership. Based in Clinton Township, MI. The fastest way to reach me:</p>
     <div class="contact-row">
       <a class="btn primary" href="mailto:aasimo13@gmail.com">aasimo13@gmail.com</a>
       <a class="btn" href="tel:+15863441284">586-344-1284</a>
