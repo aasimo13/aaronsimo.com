@@ -109,8 +109,6 @@
   .nav-links { display: flex; gap: 22px; font-family: var(--mono); font-size: 13px; }
   .nav-links a { color: var(--muted); transition: color .15s; padding: 8px 0; }
   .nav-links a:hover { color: var(--text); }
-  .nav-links .nav-operant { color: var(--accent); }
-  .nav-links .nav-operant:hover { color: var(--accent-dim); }
   .nav-toggle {
     display: none;
     font-family: var(--mono);
@@ -167,18 +165,6 @@
   .hero-contact .sep { color: var(--faint); }
   .hero-contact .loc { color: var(--faint); }
   .hero .stats { margin-top: 20px; margin-bottom: 0; }
-
-  /* featured piece: Operant */
-  .feature { border-bottom: 1px solid var(--line);
-    background: radial-gradient(1100px 380px at 18% -20%, rgba(217,119,87,0.12), transparent 60%), var(--panel); }
-  .feature .wrap { padding: 60px 28px 64px; }
-  .feature .eyebrow { color: var(--accent); margin-bottom: 14px; }
-  .feature-title { font-size: clamp(44px, 9vw, 88px); font-weight: 650; letter-spacing: -0.03em; line-height: 0.98; margin: 4px 0 16px; text-wrap: balance; }
-  .feature-tag { font-size: clamp(17px, 2.6vw, 23px); color: var(--text); font-weight: 500; max-width: 720px; margin-bottom: 16px; }
-  .feature-body { color: var(--muted); font-size: 16px; max-width: 730px; margin-bottom: 26px; }
-  .feature-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 24px; }
-  .feature .btn.primary { font-size: 14px; padding: 13px 24px; }
-  .feature .frame { margin-bottom: 22px; }
 
   /* KRUU section */
   .kruu-shot { display: block; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--panel); margin-bottom: 14px; }
@@ -272,7 +258,6 @@
     <div class="nav-links" id="site-nav">
       <a href="#kruu">kruu</a>
       <a href="#ai">ai</a>
-      <a href="#operant" class="nav-operant">operant</a>
       <a href="#work">work</a>
       <a href="#about">about</a>
       <a href="#contact">contact</a>
@@ -405,50 +390,10 @@
   </div>
 </section>
 
-<section id="operant" class="feature">
-  <div class="wrap">
-    <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> 03 · the centerpiece · a living experiment</div>
-    <h2 class="feature-title">Operant</h2>
-    <p class="feature-tag">A persistent reinforcement-learning organism, shaped forever by everyone who visits.</p>
-    <dl class="frame">
-      <div>
-        <dt>Problem</dt>
-        <dd>A learning system every visitor changes, permanently. Nothing is ever undone.</dd>
-      </div>
-      <div>
-        <dt>Built</dt>
-        <dd>A TypeScript monorepo: a framework-agnostic Q-learning core, an always-on simulation host that owns and persists the single agent, and a react-three-fiber 3D view for observers, with the learning core kept strictly decoupled from rendering.</dd>
-        </div>
-        <div>
-          <dt>Impact</dt>
-          <dd>Live. Everyone who has visited has changed it a little, through reward and punishment, and the change sticks.</dd>
-        </div>
-      </dl>
-      <p class="feature-body">
-        A small learning mind lives on a server and never stops. It moves, it learns, and every visitor who has ever
-        been here has changed it a little, permanently, through reward and punishment. Nothing is ever undone. It's part
-        art installation and part engineering piece, inspired by Sun Yuan &amp; Peng Yu's <em>Can't Help Myself</em> and
-        by simulation theory.
-      </p>
-    <div class="feature-cta">
-      <a class="btn primary" href="operant">Enter Operant →</a>
-      <a class="btn" href="https://github.com/aasimo13/operant" target="_blank" rel="noopener noreferrer">View the code ↗</a>
-    </div>
-    <div class="stack">
-      <span class="tag">TypeScript</span>
-      <span class="tag">Reinforcement learning · Q-learning</span>
-      <span class="tag">Node.js</span>
-      <span class="tag">React · react-three-fiber</span>
-      <span class="tag">pnpm monorepo</span>
-      <span class="tag">Railway · GitHub Pages</span>
-    </div>
-  </div>
-</section>
-
 <section id="work">
   <div class="wrap">
     <div class="sec-head">
-      <span class="sec-num">04</span>
+      <span class="sec-num">03</span>
       <h2 class="sec-title">Projects</h2>
     </div>
 
@@ -560,7 +505,7 @@
 <section id="about">
   <div class="wrap about">
     <div class="sec-head">
-      <span class="sec-num">05</span>
+      <span class="sec-num">04</span>
       <h2 class="sec-title">About</h2>
     </div>
     <div class="about-grid">
@@ -589,7 +534,7 @@
         </p>
         <dl class="kv">
           <dt>now</dt><dd>Lead, US Workshop Operations @ KRUU US Inc</dd>
-          <dt>building</dt><dd>KRUU warehouse planner, HomeForge (web + iOS), Operant, Argus, gutter.guru</dd>
+          <dt>building</dt><dd>KRUU warehouse planner, HomeForge (web + iOS), Argus, gutter.guru</dd>
           <dt>background</dt><dd>U.S. Navy avionics (AT2) · Six Sigma · Secret clearance (inactive)</dd>
           <dt>stack</dt><dd>Python · TypeScript / React · three.js · LLMs, agents &amp; MCP · local models · Docker · Supabase / Postgres · Firebase · Vercel · iOS · Raspberry Pi · networking</dd>
         </dl>
@@ -601,7 +546,7 @@
 <section id="contact">
   <div class="wrap">
     <div class="sec-head">
-      <span class="sec-num">06</span>
+      <span class="sec-num">05</span>
       <h2 class="sec-title">Contact</h2>
     </div>
     <p class="lede contact-lede">Open to forward deployed engineering and applied AI roles, and engineering leadership. Open to travel and relocation for the right role. Based in Clinton Township, MI. The fastest way to reach me:</p>
