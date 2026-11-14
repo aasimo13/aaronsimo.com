@@ -3,8 +3,51 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aaron Simo · Builder &amp; On-site Technical Lead</title>
-<meta name="description" content="Aaron Simo, full-stack builder, on-site technical lead at KRUU US, and aspiring forward deployed engineer. On-site technical lead at KRUU US, building the tools, networks, and test rigs operations run on. Selected work: KRUU warehouse planner, HomeForge, Operant, Argus." />
+<title>Aaron Simo · On-site Technical Lead, seeking FDE &amp; Applied AI</title>
+<meta name="description" content="Aaron Simo, on-site technical lead at KRUU US. Builds what a real operation runs on, ships full-stack products with AI agents. Open to FDE and applied AI roles." />
+<meta name="author" content="Aaron Simo" />
+<meta name="theme-color" content="#0a0a0b" />
+<link rel="canonical" href="https://aaronsimo.com/" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Aaron Simo" />
+<meta property="og:url" content="https://aaronsimo.com/" />
+<meta property="og:title" content="Aaron Simo · On-site Technical Lead, seeking FDE &amp; Applied AI" />
+<meta property="og:description" content="On-site technical lead at KRUU US. Builds what a real operation runs on, ships full-stack products, and runs a team of AI agents. Open to FDE and applied AI roles." />
+<meta property="og:image" content="https://aaronsimo.com/img/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Aaron Simo. I go where the work happens and build what makes it run. On-site technical lead, seeking forward deployed and applied AI roles." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Aaron Simo · On-site Technical Lead, seeking FDE &amp; Applied AI" />
+<meta name="twitter:description" content="On-site technical lead at KRUU US. Builds what a real operation runs on, ships full-stack products, and runs a team of AI agents." />
+<meta name="twitter:image" content="https://aaronsimo.com/img/og.png" />
+<meta name="twitter:image:alt" content="Aaron Simo. I go where the work happens and build what makes it run." />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aaron Simo",
+  "url": "https://aaronsimo.com/",
+  "email": "mailto:aasimo13@gmail.com",
+  "jobTitle": "Lead, US Workshop Operations",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "KRUU US Inc"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Clinton Township",
+    "addressRegion": "MI",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/aaron-simo-3a3972244/",
+    "https://github.com/aasimo13"
+  ]
+}
+</script>
 <style>
   :root {
     --bg: #0a0a0b;
@@ -13,14 +56,14 @@
     --line: #26262b;
     --text: #ededf0;
     --muted: #9a9aa3;
-    --faint: #6b6b73;
+    --faint: #8a8a94;
     --accent: #d97757;
     --accent-dim: #b85f43;
     --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
     --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; color-scheme: dark; }
   body {
     background: var(--bg);
     color: var(--text);
@@ -30,7 +73,27 @@
     text-rendering: optimizeLegibility;
   }
   a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible, .skip:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
   ::selection { background: var(--accent); color: #0a0a0b; }
+  .skip {
+    position: absolute;
+    left: 12px;
+    top: 8px;
+    transform: translateY(-160%);
+    background: var(--accent);
+    color: #0a0a0b;
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    z-index: 100;
+  }
+  .skip:focus { transform: none; }
+  main:focus { outline: none; }
 
   .wrap { max-width: 980px; margin: 0 auto; padding: 0 28px; }
 
@@ -41,30 +104,56 @@
     background: rgba(10,10,11,0.72);
     border-bottom: 1px solid var(--line);
   }
-  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 58px; }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 58px; gap: 16px; }
   .brand { font-family: var(--mono); font-size: 14px; letter-spacing: 0.02em; color: var(--text); }
   .brand .dot { color: var(--accent); }
-  .nav-links { display: flex; gap: 26px; font-family: var(--mono); font-size: 13px; }
-  .nav-links a { color: var(--muted); transition: color .15s; }
+  .nav-links { display: flex; gap: 22px; font-family: var(--mono); font-size: 13px; }
+  .nav-links a { color: var(--muted); transition: color .15s; padding: 8px 0; }
   .nav-links a:hover { color: var(--text); }
   .nav-links .nav-operant { color: var(--accent); }
   .nav-links .nav-operant:hover { color: var(--accent-dim); }
-  @media (max-width: 620px) { .nav-links { display: none; } }
+  .nav-toggle {
+    display: none;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 7px 12px;
+    cursor: pointer;
+  }
+  .nav-toggle:hover { border-color: var(--faint); }
+  @media (max-width: 840px) {
+    nav.nav-open { background: #0a0a0b; }
+    .nav-inner { flex-wrap: wrap; height: auto; min-height: 58px; padding: 10px 0; justify-content: flex-start; }
+    .nav-toggle { display: inline-flex; margin-left: auto; }
+    .nav-links {
+      display: none;
+      flex-basis: 100%;
+      flex-direction: column;
+      gap: 0;
+      padding: 4px 0 6px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 12px 0; border-top: 1px solid var(--line); }
+  }
 
   /* hero */
-  header.hero { padding: 92px 0 64px; border-bottom: 1px solid var(--line); }
+  header.hero { padding: 44px 0 48px; border-bottom: 1px solid var(--line); }
   .eyebrow {
     font-family: var(--mono); font-size: 12.5px; color: var(--accent);
-    letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 22px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 16px;
     display: flex; align-items: center; gap: 9px;
   }
-  .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 0 rgba(217,119,87,.6); animation: pulse 2.4s infinite; }
+  .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 0 rgba(217,119,87,.6); animation: pulse 2.4s infinite; flex: none; }
   @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(217,119,87,.5);} 70% { box-shadow: 0 0 0 8px rgba(217,119,87,0);} 100% { box-shadow: 0 0 0 0 rgba(217,119,87,0);} }
-  h1 { font-size: clamp(34px, 6vw, 58px); line-height: 1.05; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 24px; }
-  h1 .grey { color: var(--faint); }
+  h1 { font-size: clamp(34px, 6vw, 58px); line-height: 1.05; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 16px; text-wrap: balance; }
+  h1 .grey { color: #6b6b73; }
   .lede { font-size: clamp(16px, 2.4vw, 19px); color: var(--muted); max-width: 660px; }
   .lede strong { color: var(--text); font-weight: 600; }
-  .hero-cta { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .lede .target { display: block; margin-bottom: 10px; }
+  .hero-cta { margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap; }
   .btn {
     font-family: var(--mono); font-size: 13.5px; padding: 11px 18px; border-radius: 8px;
     border: 1px solid var(--line); color: var(--text); transition: all .15s; display: inline-flex; align-items: center; gap: 8px;
@@ -72,44 +161,46 @@
   .btn:hover { border-color: var(--faint); background: var(--panel); }
   .btn.primary { background: var(--accent); color: #0a0a0b; border-color: var(--accent); font-weight: 600; }
   .btn.primary:hover { background: var(--accent-dim); border-color: var(--accent-dim); }
+  .btn.primary:focus-visible { outline-color: #fff; }
   .hero-contact { margin-top: 22px; font-family: var(--mono); font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
   .hero-contact a { color: var(--muted); transition: color .15s; }
   .hero-contact a:hover { color: var(--accent); }
   .hero-contact .sep { color: var(--faint); }
   .hero-contact .loc { color: var(--faint); }
+  .hero .stats { margin-top: 20px; margin-bottom: 0; }
 
   /* featured piece: Operant */
   .feature { border-bottom: 1px solid var(--line);
     background: radial-gradient(1100px 380px at 18% -20%, rgba(217,119,87,0.12), transparent 60%), var(--panel); }
   .feature .wrap { padding: 60px 28px 64px; }
   .feature .eyebrow { color: var(--accent); margin-bottom: 14px; }
-  .feature-title { font-size: clamp(44px, 9vw, 88px); font-weight: 650; letter-spacing: -0.03em; line-height: 0.98; margin: 4px 0 16px; }
+  .feature-title { font-size: clamp(44px, 9vw, 88px); font-weight: 650; letter-spacing: -0.03em; line-height: 0.98; margin: 4px 0 16px; text-wrap: balance; }
   .feature-tag { font-size: clamp(17px, 2.6vw, 23px); color: var(--text); font-weight: 500; max-width: 720px; margin-bottom: 16px; }
   .feature-body { color: var(--muted); font-size: 16px; max-width: 730px; margin-bottom: 26px; }
   .feature-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 24px; }
   .feature .btn.primary { font-size: 14px; padding: 13px 24px; }
+  .feature .frame { margin-bottom: 22px; }
 
   /* KRUU section */
   .kruu-shot { display: block; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--panel); margin-bottom: 14px; }
   .kruu-shot img { display: block; width: 100%; height: auto; transition: transform .4s ease; }
   .kruu-shot:hover img { transform: scale(1.012); }
-  .shot-row { display: grid; grid-template-columns: 1fr; gap: 14px; }
   .caption { font-family: var(--mono); font-size: 12px; color: var(--faint); margin: -4px 0 26px; }
   .kruu-intro { color: var(--muted); font-size: 16px; max-width: 730px; margin-bottom: 28px; }
   .kruu-intro strong { color: var(--text); font-weight: 600; }
   .mini-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 18px; }
   .mini { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; }
-  .mini h4 { font-size: 16px; font-weight: 600; margin-bottom: 6px; display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap; }
-  .mini h4 a { font-family: var(--mono); font-size: 11.5px; color: var(--faint); font-weight: 400; }
-  .mini h4 a:hover { color: var(--accent); }
+  .mini h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+  .mini h3 a { font-family: var(--mono); font-size: 11.5px; color: var(--faint); font-weight: 400; }
+  .mini h3 a:hover { color: var(--accent); }
   .mini p { color: var(--muted); font-size: 14.5px; }
   @media (max-width: 720px){ .mini-grid { grid-template-columns: 1fr; } }
 
   /* section */
-  section { padding: 70px 0; border-bottom: 1px solid var(--line); }
+  section { padding: 70px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 70px; }
   .sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 38px; }
   .sec-num { font-family: var(--mono); font-size: 13px; color: var(--accent); }
-  .sec-title { font-size: 14px; font-family: var(--mono); color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; }
+  .sec-title { font-size: 14px; font-family: var(--mono); color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; font-weight: 500; }
 
   /* project cards */
   .projects { display: grid; gap: 18px; }
@@ -124,18 +215,88 @@
   .card .url a:hover { color: var(--accent); }
   .badge { font-family: var(--mono); font-size: 11px; color: var(--accent); border: 1px solid var(--accent-dim); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
   .badge.ship { color: #5fb87a; border-color: #2f5c3c; }
-  .card p { color: var(--muted); font-size: 15.5px; margin-bottom: 18px; max-width: 640px; }
   .stack { display: flex; flex-wrap: wrap; gap: 8px; }
   .tag { font-family: var(--mono); font-size: 11.5px; color: var(--muted); background: #0e0e10; border: 1px solid var(--line); border-radius: 6px; padding: 4px 9px; }
+
+  .frame { display: grid; gap: 12px; margin: 4px 0 18px; }
+  .frame div { display: grid; grid-template-columns: 76px 1fr; gap: 8px 14px; align-items: baseline; }
+  .frame dt { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+  .frame dd { color: var(--muted); font-size: 15.5px; margin: 0; }
+  .frame dd strong { color: var(--text); font-weight: 600; }
+  @media (max-width: 620px){ .frame div { grid-template-columns: 1fr; gap: 2px; } }
+
+  /* operating diagram */
+  .flow {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0 0 10px;
+  }
+  .flow li {
+    background: #0e0e10;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 12px 12px 14px;
+    min-width: 0;
+  }
+  .flow-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+  }
+  .flow-step::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: #3a3a42;
+  }
+  .flow li:last-child .flow-step::after { display: none; }
+  .flow-name { display: block; margin-top: 8px; font-size: 14.5px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.25; }
+  .flow-role { display: block; margin-top: 4px; font-family: var(--mono); font-size: 11px; line-height: 1.35; color: var(--muted); }
+  @media (max-width: 800px) {
+    .flow { grid-template-columns: 1fr; gap: 0; margin-left: 4px; border-left: 1px solid var(--line); }
+    .flow li { background: transparent; border: none; border-radius: 0; padding: 0 0 16px 16px; position: relative; }
+    .flow-step::after { display: none; }
+    .flow li::before {
+      content: "";
+      position: absolute;
+      left: -4px;
+      top: 4px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+  }
+
+  .subhead {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 22px 0 12px;
+  }
+  .prose { color: var(--muted); font-size: 16px; max-width: 730px; margin-top: 22px; }
+  .prose + .prose { margin-top: 14px; }
+  .prose strong, .about a { color: var(--text); font-weight: 600; }
+  .prose a, .about a { border-bottom: 1px solid var(--accent-dim); }
+  .prose a:hover, .about a:hover { color: var(--accent); }
 
   /* other work list */
   .otherlist { display: grid; gap: 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
   .row { display: flex; align-items: baseline; gap: 16px; padding: 18px 24px; border-bottom: 1px solid var(--line); transition: background .15s; }
   .row:last-child { border-bottom: none; }
   .row:hover { background: var(--panel); }
-  .row .name { font-weight: 600; font-size: 16px; min-width: 168px; }
+  .row .name { font-weight: 600; font-size: 16px; min-width: 190px; margin: 0; line-height: 1.3; }
   .row .name .u { font-family: var(--mono); font-size: 12px; color: var(--faint); display: block; font-weight: 400; margin-top: 2px; }
-  .row .desc { color: var(--muted); font-size: 14.5px; }
+  .row .desc { color: var(--muted); font-size: 14.5px; margin: 0; }
   @media (max-width: 620px){ .row { flex-direction: column; gap: 6px; } .row .name { min-width: 0; } }
 
   /* about */
@@ -145,6 +306,7 @@
   .kv { display: grid; grid-template-columns: 130px 1fr; gap: 6px 18px; font-size: 15px; margin-top: 8px; }
   .kv dt { font-family: var(--mono); font-size: 12.5px; color: var(--faint); padding-top: 2px; }
   .kv dd { color: var(--muted); }
+  @media (max-width: 620px){ .kv { grid-template-columns: 1fr; gap: 2px; margin-bottom: 12px; } }
 
   /* stats band */
   .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin-bottom: 34px; }
@@ -155,20 +317,32 @@
   @media (max-width: 620px){ .stats { grid-template-columns: repeat(2, 1fr); } }
 
   /* contact */
+  .contact-lede { margin-bottom: 6px; }
   .contact-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px; }
 
   footer { padding: 40px 0 60px; }
   .foot-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-family: var(--mono); font-size: 12.5px; color: var(--faint); }
   .foot-inner a:hover { color: var(--accent); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .pulse { animation: none; }
+    .card, .kruu-shot img, .row, .nav-links a, .btn { transition: none; }
+    .card:hover, .kruu-shot:hover img { transform: none; }
+  }
 </style>
 </head>
 <body>
 
-<nav>
+<a class="skip" href="#content">Skip to content</a>
+
+<nav aria-label="Primary">
   <div class="wrap nav-inner">
     <div class="brand">aaron simo<span class="dot">.</span></div>
-    <div class="nav-links">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <div class="nav-links" id="site-nav">
       <a href="#kruu">kruu</a>
+      <a href="#ai">ai</a>
       <a href="#operant" class="nav-operant">operant</a>
       <a href="#work">work</a>
       <a href="#other">other</a>
@@ -178,11 +352,14 @@
   </div>
 </nav>
 
+<main id="content" tabindex="-1">
+
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow"><span class="pulse"></span> full-stack builder · on-site technical lead · aspiring FDE</div>
+    <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> on-site technical lead · seeking FDE &amp; applied AI</div>
     <h1>Aaron Simo.<br /><span class="grey">I go where the work happens and build what makes it run.</span></h1>
     <p class="lede">
+      <strong class="target">Open to forward deployed engineering and applied AI roles.</strong>
       I'm the on-site technical lead for the US operation of a German photobooth manufacturer. A few thousand devices
       a month pass through my team, and I build the tools, test rigs, networks, and dashboards they run on, right now
       including the IT buildout of a new building. I also build and ship full-stack products on my own, and I use AI
@@ -191,14 +368,23 @@
     </p>
     <div class="hero-cta">
       <a class="btn primary" href="#kruu">See the KRUU work</a>
-      <a class="btn" href="AaronSimo_Resume.pdf" target="_blank" rel="noopener">View résumé ↗</a>
+      <a class="btn" href="#ai">How I build with AI</a>
+      <a class="btn" href="AaronSimo_Resume.pdf" target="_blank" rel="noopener noreferrer">View résumé ↗</a>
     </div>
     <div class="hero-contact">
       <a href="mailto:aasimo13@gmail.com">aasimo13@gmail.com</a>
       <span class="sep">·</span>
-      <a href="https://www.linkedin.com/in/aaron-simo-3a3972244/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://www.linkedin.com/in/aaron-simo-3a3972244/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <span class="sep">·</span>
+      <a href="https://github.com/aasimo13" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       <span class="sep">·</span>
       <span class="loc">Clinton Township, MI</span>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n">85</div><div class="l">technicians led<br />(Navy avionics)</div></div>
+      <div class="stat"><div class="n"><span class="accent">$79M</span></div><div class="l">cost savings delivered fleet-wide</div></div>
+      <div class="stat"><div class="n">~2,500<span class="accent">/mo</span></div><div class="l">devices fulfilled, peaking at 1,000/wk</div></div>
+      <div class="stat"><div class="n">$1&ndash;5M</div><div class="l">device inventory managed</div></div>
     </div>
   </div>
 </header>
@@ -207,14 +393,14 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="sec-num">01</span>
-      <span class="sec-title">In the field · KRUU US</span>
+      <h2 class="sec-title">In the field · KRUU US</h2>
     </div>
     <p class="kruu-intro">
       My day job is the closest thing to forward deployed engineering I know of. I'm the person on site who makes the
       technology work for a real operation, working with engineering and IT at headquarters in Germany. Here's a slice of what I've built there.
     </p>
 
-    <a class="kruu-shot" href="img/kruu-warehouse-3d.webp" target="_blank" rel="noopener">
+    <a class="kruu-shot" href="img/kruu-warehouse-3d.webp" target="_blank" rel="noopener noreferrer">
       <img src="img/kruu-warehouse-3d.webp" width="1600" height="891" decoding="async"
            alt="3D model of the new KRUU US warehouse showing shipping shelves, check and clean rows, conveyors, racks, and building steel, merged with phone scans of the real floor" />
     </a>
@@ -228,14 +414,20 @@
         </div>
         <span class="badge ship">in use</span>
       </div>
-      <p>
-        When we took a new building, I built the tool we planned it in. It's one page with a 2D floor plan and a 3D
-        view, built from the architect's PDF and LiDAR scans of the empty building. It lays out shipping
-        shelves, check and clean rows, conveyors, racks, and building steel, and it runs the power plan with panel
-        schedules and load checks plus a data port plan, with PDF, PNG, and Excel exports. It also loads the conveyor
-        vendor's own CAD model (8,990 parts from their STEP file) so we could check their layout against ours before
-        anything was installed. I packaged it so our German site can rebuild it for their warehouse.
-      </p>
+      <dl class="frame">
+        <div>
+          <dt>Problem</dt>
+          <dd>We took a new building and had to plan the floor, the power, and the data before anything was installed, including checking a conveyor vendor's layout against ours.</dd>
+        </div>
+        <div>
+          <dt>Built</dt>
+          <dd>One page with a 2D floor plan and a 3D view, from the architect's PDF and LiDAR scans of the empty building. It lays out shipping shelves, check and clean rows, conveyors, racks, and building steel. It runs the power plan with panel schedules and load checks, plus a data port plan, and it exports PDF, PNG, and Excel. It loads the conveyor vendor's own CAD model, 8,990 parts from their STEP file.</dd>
+        </div>
+        <div>
+          <dt>Impact</dt>
+          <dd>In use by the KRUU US team. I packaged it so our German site can rebuild it for their warehouse.</dd>
+        </div>
+      </dl>
       <div class="stack">
         <span class="tag">three.js</span>
         <span class="tag">LiDAR scans · glTF</span>
@@ -248,49 +440,138 @@
 
     <div class="mini-grid">
       <div class="mini">
-        <h4>Facility IT buildout</h4>
+        <h3>Facility IT buildout</h3>
         <p>I own IT and workshop for the move: internet cutover, network and switching to every fulfillment shelf, bringing the building's inherited access control and camera systems onto our network, and the shelving layout, power distribution, and cabling.</p>
       </div>
       <div class="mini">
-        <h4>MiLa test station</h4>
+        <h3>MiLa test station</h3>
         <p>Raspberry Pi pass/fail rig for USB microphone units. Plays a frequency sweep, records it back, and validates the capture in about five seconds, with auto plug-in triggering, LED and beep output, and self-calibration.</p>
       </div>
       <div class="mini">
-        <h4>Printer test rigs <a href="https://github.com/aasimo13/PRig" target="_blank" rel="noopener">code ↗</a></h4>
-        <p>Plug in a DNP or Canon SELPHY printer and the rig detects it over USB and runs a 10 image QC suite (color, resolution, text, edge bleed) with a live web dashboard. Headless, with a one command reset for the floor.</p>
+        <h3>Printer test rigs <a href="https://github.com/aasimo13/PRig" target="_blank" rel="noopener noreferrer">code ↗</a></h3>
+        <p>Plug in a DNP or Canon SELPHY printer and the rig detects it over USB and runs a 10-image QC suite (color, resolution, text, edge bleed) with a live web dashboard. Headless, with a one-command reset for the floor.</p>
       </div>
       <div class="mini">
-        <h4>DNP print server <a href="https://github.com/aasimo13/kruu-print-server-dnp" target="_blank" rel="noopener">code ↗</a></h4>
-        <p>Pi based photo print station: drag photos into a web page or a shared folder and they print at 4x6, 4x4, or cut strips. One command installer that detects the printer and user on its own.</p>
+        <h3>DNP print server <a href="https://github.com/aasimo13/kruu-print-server-dnp" target="_blank" rel="noopener noreferrer">code ↗</a></h3>
+        <p>Pi-based photo print station: drag photos into a web page or a shared folder and they print at 4x6, 4x4, or cut strips. One-command installer that detects the printer and user on its own.</p>
       </div>
       <div class="mini">
-        <h4>Photobooth Test Box</h4>
+        <h3>Photobooth Test Box</h3>
         <p>A diagnostic box for the fleet that checks the 24V supply, USB voltages, the pedal switch, and cable continuity, so a tech can find a fault in minutes instead of swapping parts.</p>
       </div>
       <div class="mini">
-        <h4>Floor dashboards &amp; parts</h4>
-        <p>Metabase dashboards on Pi kiosk screens and a mobile fulfillment widget for live throughput and first pass yield. CAD and 3D printed parts for the fleet, like a retention clip for the DNP printers.</p>
+        <h3>Floor dashboards &amp; parts</h3>
+        <p>Metabase dashboards on Pi kiosk screens and a mobile fulfillment widget for live throughput and first-pass yield. CAD and 3D printed parts for the fleet, like a retention clip for the DNP printers.</p>
       </div>
     </div>
   </div>
 </section>
 
+<section id="ai">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2 class="sec-title">How I build with AI</h2>
+    </div>
+    <p class="kruu-intro">
+      I run this the way I run the floor. <strong>Duet</strong> is my chief of staff. It sits above the specialized agents and coordinates all of it: work, side ventures, family, and personal. The agent team under Duet runs in the Grok Bot app.
+    </p>
+
+    <ol class="flow" aria-label="How a coding task gets to production">
+      <li>
+        <span class="flow-step">01</span>
+        <span class="flow-name">Aaron</span>
+        <span class="flow-role">reviews and ships</span>
+      </li>
+      <li>
+        <span class="flow-step">02</span>
+        <span class="flow-name">Duet</span>
+        <span class="flow-role">chief of staff</span>
+      </li>
+      <li>
+        <span class="flow-step">03</span>
+        <span class="flow-name">Agent team</span>
+        <span class="flow-role">specialists</span>
+      </li>
+      <li>
+        <span class="flow-step">04</span>
+        <span class="flow-name">Grok Bot</span>
+        <span class="flow-role">cloud coding agents</span>
+      </li>
+      <li>
+        <span class="flow-step">05</span>
+        <span class="flow-name">Pull requests</span>
+        <span class="flow-role">on my repos</span>
+      </li>
+      <li>
+        <span class="flow-step">06</span>
+        <span class="flow-name">Production</span>
+        <span class="flow-role">what ships</span>
+      </li>
+    </ol>
+    <p class="caption">How a coding task moves from me to production.</p>
+
+    <p class="subhead">The agent team · Grok Bot app</p>
+    <div class="otherlist">
+      <div class="row">
+        <h3 class="name">Router <span class="u">primary</span></h3>
+        <p class="desc">Takes any task and routes it to the right specialist.</p>
+      </div>
+      <div class="row">
+        <h3 class="name">Tradbot <span class="u">email and calendar</span></h3>
+        <p class="desc">Watches my personal email and calendar so school forms, bills, and RSVPs don't slip, and drafts the replies.</p>
+      </div>
+      <div class="row">
+        <h3 class="name">SWE <span class="u">software engineer</span></h3>
+        <p class="desc">Writes code, triages issues, and monitors production.</p>
+      </div>
+      <div class="row">
+        <h3 class="name">Professional Growth <span class="u">career</span></h3>
+        <p class="desc">Career growth and the job search.</p>
+      </div>
+      <div class="row">
+        <h3 class="name">General-purpose <span class="u">the rest</span></h3>
+        <p class="desc">Bots that take real work off my plate.</p>
+      </div>
+    </div>
+
+    <p class="prose">
+      Grok Bot drives the coding. Agents scope the work and hand it to cloud coding agents, which open pull requests on my repos. I review each one before it ships. This site is in that loop: an agent scoped the update, and a cloud coding agent opened the pull request.
+    </p>
+    <p class="prose">
+      Day to day I also work in Claude, GPT, and Gemini, run local models in LM Studio on my Mac, and build with MCP and agents. I orchestrate the team, stay in the loop, and review what ships. Same shape as the on-site work.
+    </p>
+  </div>
+</section>
+
 <section id="operant" class="feature">
   <div class="wrap">
-    <div class="eyebrow"><span class="pulse"></span> the centerpiece · a living experiment</div>
+    <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> 03 · the centerpiece · a living experiment</div>
     <h2 class="feature-title">Operant</h2>
     <p class="feature-tag">A persistent reinforcement-learning organism, shaped forever by everyone who visits.</p>
-    <p class="feature-body">
-      A small learning mind lives on a server and never stops. It moves, it learns, and every visitor who has ever
-      been here has changed it a little, permanently, through reward and punishment. Nothing is ever undone. It's part
-      art installation and part engineering piece, inspired by Sun Yuan &amp; Peng Yu's <em>Can't Help Myself</em> and
-      by simulation theory. Built as a TypeScript monorepo: a framework-agnostic Q-learning core, an always-on
-      simulation host that owns and persists the single agent, and a react-three-fiber 3D view for observers, with the
-      learning core kept strictly decoupled from rendering.
-    </p>
+    <dl class="frame">
+      <div>
+        <dt>Problem</dt>
+        <dd>A learning system every visitor changes, permanently. Nothing is ever undone.</dd>
+      </div>
+      <div>
+        <dt>Built</dt>
+        <dd>A TypeScript monorepo: a framework-agnostic Q-learning core, an always-on simulation host that owns and persists the single agent, and a react-three-fiber 3D view for observers, with the learning core kept strictly decoupled from rendering.</dd>
+        </div>
+        <div>
+          <dt>Impact</dt>
+          <dd>Live. Everyone who has visited has changed it a little, through reward and punishment, and the change sticks.</dd>
+        </div>
+      </dl>
+      <p class="feature-body">
+        A small learning mind lives on a server and never stops. It moves, it learns, and every visitor who has ever
+        been here has changed it a little, permanently, through reward and punishment. Nothing is ever undone. It's part
+        art installation and part engineering piece, inspired by Sun Yuan &amp; Peng Yu's <em>Can't Help Myself</em> and
+        by simulation theory.
+      </p>
     <div class="feature-cta">
       <a class="btn primary" href="operant">Enter Operant →</a>
-      <a class="btn" href="https://github.com/aasimo13/operant" target="_blank" rel="noopener">View the code ↗</a>
+      <a class="btn" href="https://github.com/aasimo13/operant" target="_blank" rel="noopener noreferrer">View the code ↗</a>
     </div>
     <div class="stack">
       <span class="tag">TypeScript</span>
@@ -306,8 +587,8 @@
 <section id="work">
   <div class="wrap">
     <div class="sec-head">
-      <span class="sec-num">02</span>
-      <span class="sec-title">Projects</span>
+      <span class="sec-num">04</span>
+      <h2 class="sec-title">Projects</h2>
     </div>
 
     <div class="projects">
@@ -316,17 +597,24 @@
         <div class="card-top">
           <div>
             <h3>HomeForge</h3>
-            <span class="url"><a href="https://homeforge.family" target="_blank" rel="noopener">homeforge.family ↗</a></span>
+            <span class="url"><a href="https://homeforge.family" target="_blank" rel="noopener noreferrer">homeforge.family ↗</a></span>
           </div>
           <span class="badge ship">live · web + iOS</span>
         </div>
-        <p>
-          A family-management app with AI-assisted meal planning, smart shopping lists, shared finances,
-          scheduling, and chore gamification. Shipped on the web and the App Store, built and deployed solo:
-          a web frontend, a Supabase Postgres backend with row-level security and hardening migrations,
-          edge functions on a GitHub Actions pipeline, and an iOS build with Apple in-app purchases.
-          It's my biggest project, and I designed, built, deployed, and have maintained all of it.
-        </p>
+        <dl class="frame">
+          <div>
+            <dt>Problem</dt>
+            <dd>A household's meals, shopping, money, schedule, and chores, handled as one product.</dd>
+          </div>
+          <div>
+            <dt>Built</dt>
+            <dd>A family-management app with AI-assisted meal planning, smart shopping lists, shared finances, scheduling, and chore gamification. Shipped on the web and the App Store, built and deployed solo: a web frontend, a Supabase Postgres backend with row-level security and hardening migrations, edge functions on a GitHub Actions pipeline, and an iOS build with Apple in-app purchases.</dd>
+          </div>
+          <div>
+            <dt>Impact</dt>
+            <dd>Live on the web and the App Store. It's my biggest project, and I designed, built, deployed, and have maintained all of it.</dd>
+          </div>
+        </dl>
         <div class="stack">
           <span class="tag">Supabase / Postgres</span>
           <span class="tag">Row-Level Security</span>
@@ -347,16 +635,20 @@
           </div>
           <span class="badge">AI / inference</span>
         </div>
-        <p>
-          A fully-local, AI-powered home-monitoring and face-recognition system for Home Assistant. No cloud,
-          and everything runs on your own hardware. It's three cooperating services: a <strong>Watcher</strong>
-          that snapshots the home's state every few minutes and asks an LLM "is anything actually wrong?"
-          (a hardened, high-signal prompt with an urgent-push vs. daily-digest policy); a <strong>Recognizer</strong>
-          running InsightFace on CPU, exposing a CodeProject.AI-compatible API to detect and identify faces
-          on-device; and a <strong>Console</strong> that clusters unknown faces by similarity so you name a
-          group once and it learns that person from then on. Pure logic is unit-tested; the container and
-          glue layers are dry-run-verified.
-        </p>
+        <dl class="frame">
+          <div>
+            <dt>Problem</dt>
+            <dd>Home monitoring and face recognition that stay on your own hardware. No cloud.</dd>
+          </div>
+          <div>
+            <dt>Built</dt>
+            <dd>Three cooperating services. A <strong>Watcher</strong> that snapshots the home's state every few minutes and asks an LLM "is anything actually wrong?" (a hardened, high-signal prompt with an urgent-push vs. daily-digest policy). A <strong>Recognizer</strong> running InsightFace on CPU, exposing a CodeProject.AI-compatible API to detect and identify faces on-device. A <strong>Console</strong> that clusters unknown faces by similarity so you name a group once and it learns that person from then on.</dd>
+          </div>
+          <div>
+            <dt>Impact</dt>
+            <dd>Fully local. Pure logic is unit-tested. The container and glue layers are dry-run-verified.</dd>
+          </div>
+        </dl>
         <div class="stack">
           <span class="tag">Python</span>
           <span class="tag">LLM reasoning loop</span>
@@ -370,20 +662,28 @@
         </div>
       </article>
 
-
       <article class="card">
         <div class="card-top">
           <div>
             <h3>gutter.guru</h3>
-            <span class="url"><a href="https://gutter.guru" target="_blank" rel="noopener">gutter.guru ↗</a></span>
+            <span class="url"><a href="https://gutter.guru" target="_blank" rel="noopener noreferrer">gutter.guru ↗</a></span>
           </div>
           <span class="badge ship">live business</span>
         </div>
-        <p>
-          A website and CRM I built for Guys Gutters LLC to manage customers, jobs, and scheduling. I designed and
-          deployed it for a real, operating business. It's a purpose-built tool that replaces spreadsheets and
-          scattered notes with one system the company actually runs on.
-        </p>
+        <dl class="frame">
+          <div>
+            <dt>Problem</dt>
+            <dd>Guys Gutters LLC was running customers, jobs, and scheduling out of spreadsheets and scattered notes.</dd>
+          </div>
+          <div>
+            <dt>Built</dt>
+            <dd>A website and CRM I designed and deployed for that business: customers, jobs, and scheduling, on its own domain.</dd>
+          </div>
+          <div>
+            <dt>Impact</dt>
+            <dd>A real, operating business runs on it. It replaces the spreadsheets and the scattered notes with one system.</dd>
+          </div>
+        </dl>
         <div class="stack">
           <span class="tag">Full-stack web app</span>
           <span class="tag">CRM</span>
@@ -392,7 +692,6 @@
         </div>
       </article>
 
-
     </div>
   </div>
 </section>
@@ -400,17 +699,17 @@
 <section id="other">
   <div class="wrap">
     <div class="sec-head">
-      <span class="sec-num">03</span>
-      <span class="sec-title">Also built</span>
+      <span class="sec-num">05</span>
+      <h2 class="sec-title">Also built</h2>
     </div>
     <div class="otherlist">
       <div class="row">
-        <div class="name">AI-assisted research <span class="u">side projects</span></div>
-        <div class="desc">I use Claude agents to take open questions from idea to checked result: lit review, code, proofs, and stress tests. Write-ups coming here.</div>
+        <h3 class="name">AI-assisted research <span class="u">side projects</span></h3>
+        <p class="desc">I use Claude agents to take open questions from idea to checked result: lit review, code, proofs, and stress tests. Write-ups coming here.</p>
       </div>
       <div class="row">
-        <div class="name">Experiments <span class="u">prototypes</span></div>
-        <div class="desc">A steady stream of prototypes. The way I learn a new tool is by shipping something with it.</div>
+        <h3 class="name">Experiments <span class="u">prototypes</span></h3>
+        <p class="desc">A steady stream of prototypes. The way I learn a new tool is by shipping something with it.</p>
       </div>
     </div>
   </div>
@@ -419,14 +718,8 @@
 <section id="about">
   <div class="wrap about">
     <div class="sec-head">
-      <span class="sec-num">04</span>
-      <span class="sec-title">About</span>
-    </div>
-    <div class="stats">
-      <div class="stat"><div class="n">85</div><div class="l">technicians led<br />(Navy avionics)</div></div>
-      <div class="stat"><div class="n"><span class="accent">$79M</span></div><div class="l">cost savings delivered fleet-wide</div></div>
-      <div class="stat"><div class="n">~2,500<span class="accent">/mo</span></div><div class="l">devices fulfilled, peaking at 1,000/wk</div></div>
-      <div class="stat"><div class="n">$1&ndash;5M</div><div class="l">device inventory managed</div></div>
+      <span class="sec-num">06</span>
+      <h2 class="sec-title">About</h2>
     </div>
     <div class="about-grid">
       <div>
@@ -450,12 +743,13 @@
           dashboard that flags a bottleneck, or a SaaS backend that has to stay up for a paying customer, I care
           about getting things to work and building the thing that makes the next person's job easier. I also build
           full-stack software on my own, and I use AI tools like Claude, GPT, and Gemini every day in my technical work.
+          The operating setup, Duet and the agent team, is in <a href="#ai">How I build with AI</a>.
         </p>
         <dl class="kv">
           <dt>now</dt><dd>Lead, US Workshop Operations @ KRUU US Inc</dd>
           <dt>building</dt><dd>KRUU warehouse planner, HomeForge (web + iOS), Operant, Argus, gutter.guru</dd>
           <dt>background</dt><dd>U.S. Navy avionics (AT2) · Six Sigma · Secret clearance (inactive)</dd>
-          <dt>stack</dt><dd>Python · TypeScript / React · three.js · LLMs, agents &amp; MCP · Docker · Supabase / Postgres · Firebase · Vercel · iOS · Raspberry Pi · networking</dd>
+          <dt>stack</dt><dd>Python · TypeScript / React · three.js · LLMs, agents &amp; MCP · local models · Docker · Supabase / Postgres · Firebase · Vercel · iOS · Raspberry Pi · networking</dd>
         </dl>
       </div>
     </div>
@@ -465,18 +759,21 @@
 <section id="contact">
   <div class="wrap">
     <div class="sec-head">
-      <span class="sec-num">05</span>
-      <span class="sec-title">Contact</span>
+      <span class="sec-num">07</span>
+      <h2 class="sec-title">Contact</h2>
     </div>
-    <p class="lede" style="margin-bottom:6px;">Open to forward deployed engineering and applied AI roles, and engineering leadership. Based in Clinton Township, MI. The fastest way to reach me:</p>
+    <p class="lede contact-lede">Open to forward deployed engineering and applied AI roles, and engineering leadership. Based in Clinton Township, MI. The fastest way to reach me:</p>
     <div class="contact-row">
       <a class="btn primary" href="mailto:aasimo13@gmail.com">aasimo13@gmail.com</a>
-      <a class="btn" href="https://www.linkedin.com/in/aaron-simo-3a3972244/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a class="btn" href="AaronSimo_Resume.pdf" target="_blank" rel="noopener">View résumé ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/aaron-simo-3a3972244/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/aasimo13" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <a class="btn" href="AaronSimo_Resume.pdf" target="_blank" rel="noopener noreferrer">View résumé ↗</a>
       <a class="btn" href="AaronSimo_Resume.pdf" download>Download résumé ↓</a>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap foot-inner">
@@ -487,7 +784,40 @@
 
 <script>
   document.getElementById("yr").textContent = new Date().getFullYear();
+  (function () {
+    var toggle = document.querySelector(".nav-toggle");
+    var links = document.getElementById("site-nav");
+    if (!toggle || !links) return;
+    var nav = toggle.closest("nav");
+    function setOpen(open) {
+      links.classList.toggle("open", open);
+      if (nav) nav.classList.toggle("nav-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.textContent = open ? "Close" : "Menu";
+    }
+    toggle.addEventListener("click", function () {
+      setOpen(toggle.getAttribute("aria-expanded") !== "true");
+    });
+    links.addEventListener("click", function (e) {
+      if (e.target.closest("a")) setOpen(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+  })();
 </script>
+
+<noscript>
+<style>
+  @media (max-width: 840px) {
+    .nav-toggle { display: none !important; }
+    .nav-links { display: flex !important; flex-basis: 100%; flex-direction: column; }
+  }
+</style>
+</noscript>
 
 <!-- lightweight analytics: page views + résumé downloads (Supabase counter) -->
 <script>
