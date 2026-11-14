@@ -8,8 +8,8 @@ showcases selected projects and links to a downloadable resume.
 ## What's here
 
 - **Portfolio / landing page** — a dark-themed single page with a sticky nav,
-  a short intro, field work at KRUU US, a section on how Aaron builds with AI
-  (Duet, the Grok Bot agent team, and the review loop), Operant, and selected
+  a short intro, field work at KRUU US, a short section on how he runs a team
+  of AI agents, Operant, and selected
   projects (HomeForge, Argus, gutter.guru).
 - **Resume** — a downloadable PDF (`AaronSimo_Resume.pdf`) linked from the page.
   Its source is `resume/resume.html`; rebuild the PDF with `node resume/build.js` (needs Playwright).

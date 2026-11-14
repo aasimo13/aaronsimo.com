@@ -224,79 +224,9 @@
   .frame dd strong { color: var(--text); font-weight: 600; }
   @media (max-width: 620px){ .frame div { grid-template-columns: 1fr; gap: 2px; } }
 
-  /* operating diagram */
-  .flow {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 10px;
-    margin: 0 0 10px;
-  }
-  .flow li {
-    background: #0e0e10;
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 12px 12px 14px;
-    min-width: 0;
-  }
-  .flow-step {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--accent);
-    letter-spacing: 0.04em;
-  }
-  .flow-step::after {
-    content: "";
-    height: 1px;
-    flex: 1;
-    background: #3a3a42;
-  }
-  .flow li:last-child .flow-step::after { display: none; }
-  .flow-name { display: block; margin-top: 8px; font-size: 14.5px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.25; }
-  .flow-role { display: block; margin-top: 4px; font-family: var(--mono); font-size: 11px; line-height: 1.35; color: var(--muted); }
-  @media (max-width: 800px) {
-    .flow { grid-template-columns: 1fr; gap: 0; margin-left: 4px; border-left: 1px solid var(--line); }
-    .flow li { background: transparent; border: none; border-radius: 0; padding: 0 0 16px 16px; position: relative; }
-    .flow-step::after { display: none; }
-    .flow li::before {
-      content: "";
-      position: absolute;
-      left: -4px;
-      top: 4px;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-  }
-
-  .subhead {
-    font-family: var(--mono);
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 22px 0 12px;
-  }
-  .prose { color: var(--muted); font-size: 16px; max-width: 730px; margin-top: 22px; }
-  .prose + .prose { margin-top: 14px; }
-  .prose strong, .about a { color: var(--text); font-weight: 600; }
-  .prose a, .about a { border-bottom: 1px solid var(--accent-dim); }
-  .prose a:hover, .about a:hover { color: var(--accent); }
-
-  /* other work list */
-  .otherlist { display: grid; gap: 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-  .row { display: flex; align-items: baseline; gap: 16px; padding: 18px 24px; border-bottom: 1px solid var(--line); transition: background .15s; }
-  .row:last-child { border-bottom: none; }
-  .row:hover { background: var(--panel); }
-  .row .name { font-weight: 600; font-size: 16px; min-width: 190px; margin: 0; line-height: 1.3; }
-  .row .name .u { font-family: var(--mono); font-size: 12px; color: var(--faint); display: block; font-weight: 400; margin-top: 2px; }
-  .row .desc { color: var(--muted); font-size: 14.5px; margin: 0; }
-  @media (max-width: 620px){ .row { flex-direction: column; gap: 6px; } .row .name { min-width: 0; } }
+  .card p { color: var(--muted); font-size: 16px; max-width: 720px; margin: 0; }
+  .about a { color: var(--text); font-weight: 600; border-bottom: 1px solid var(--accent-dim); }
+  .about a:hover { color: var(--accent); }
 
   /* about */
   .about-grid { display: grid; grid-template-columns: 1fr; gap: 22px; }
@@ -326,7 +256,7 @@
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .pulse { animation: none; }
-    .card, .kruu-shot img, .row, .nav-links a, .btn { transition: none; }
+    .card, .kruu-shot img, .nav-links a, .btn { transition: none; }
     .card:hover, .kruu-shot:hover img { transform: none; }
   }
 </style>
@@ -469,74 +399,9 @@
       <span class="sec-num">02</span>
       <h2 class="sec-title">How I build with AI</h2>
     </div>
-    <p class="kruu-intro">
-      I run this the way I run the floor. <strong>Duet</strong> is my chief of staff. It sits above the specialized agents and coordinates all of it: work, side ventures, family, and personal. The agent team under Duet runs in the Grok Bot app.
-    </p>
-
-    <ol class="flow" aria-label="How a coding task gets to production">
-      <li>
-        <span class="flow-step">01</span>
-        <span class="flow-name">Aaron</span>
-        <span class="flow-role">reviews and ships</span>
-      </li>
-      <li>
-        <span class="flow-step">02</span>
-        <span class="flow-name">Duet</span>
-        <span class="flow-role">chief of staff</span>
-      </li>
-      <li>
-        <span class="flow-step">03</span>
-        <span class="flow-name">Agent team</span>
-        <span class="flow-role">specialists</span>
-      </li>
-      <li>
-        <span class="flow-step">04</span>
-        <span class="flow-name">Grok Bot</span>
-        <span class="flow-role">cloud coding agents</span>
-      </li>
-      <li>
-        <span class="flow-step">05</span>
-        <span class="flow-name">Pull requests</span>
-        <span class="flow-role">on my repos</span>
-      </li>
-      <li>
-        <span class="flow-step">06</span>
-        <span class="flow-name">Production</span>
-        <span class="flow-role">what ships</span>
-      </li>
-    </ol>
-    <p class="caption">How a coding task moves from me to production.</p>
-
-    <p class="subhead">The agent team · Grok Bot app</p>
-    <div class="otherlist">
-      <div class="row">
-        <h3 class="name">Router <span class="u">primary</span></h3>
-        <p class="desc">Takes any task and routes it to the right specialist.</p>
-      </div>
-      <div class="row">
-        <h3 class="name">Tradbot <span class="u">email and calendar</span></h3>
-        <p class="desc">Watches my personal email and calendar so school forms, bills, and RSVPs don't slip, and drafts the replies.</p>
-      </div>
-      <div class="row">
-        <h3 class="name">SWE <span class="u">software engineer</span></h3>
-        <p class="desc">Writes code, triages issues, and monitors production.</p>
-      </div>
-      <div class="row">
-        <h3 class="name">Professional Growth <span class="u">career</span></h3>
-        <p class="desc">Career growth and the job search.</p>
-      </div>
-      <div class="row">
-        <h3 class="name">General-purpose <span class="u">the rest</span></h3>
-        <p class="desc">Bots that take real work off my plate.</p>
-      </div>
-    </div>
-
-    <p class="prose">
-      Grok Bot drives the coding. Agents scope the work and hand it to cloud coding agents, which open pull requests on my repos. I review each one before it ships. This site is in that loop: an agent scoped the update, and a cloud coding agent opened the pull request.
-    </p>
-    <p class="prose">
-      Day to day I also work in Claude, GPT, and Gemini, run local models in LM Studio on my Mac, and build with MCP and agents. I orchestrate the team, stay in the loop, and review what ships. Same shape as the on-site work.
-    </p>
+    <article class="card">
+      <p>I use AI agents every day. I run a team of them that act as employees and take on real work. I direct that work, and I review what ships.</p>
+    </article>
   </div>
 </section>
 
@@ -720,7 +585,7 @@
           dashboard that flags a bottleneck, or a SaaS backend that has to stay up for a paying customer, I care
           about getting things to work and building the thing that makes the next person's job easier. I also build
           full-stack software on my own, and I use AI tools like Claude, GPT, and Gemini every day in my technical work.
-          The operating setup, Duet and the agent team, is in <a href="#ai">How I build with AI</a>.
+          The team of agents is in <a href="#ai">How I build with AI</a>.
         </p>
         <dl class="kv">
           <dt>now</dt><dd>Lead, US Workshop Operations @ KRUU US Inc</dd>
