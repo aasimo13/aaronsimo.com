@@ -295,7 +295,7 @@
       <div class="stat"><div class="n">85</div><div class="l">technicians led<br />(Navy avionics)</div></div>
       <div class="stat"><div class="n"><span class="accent">$79M</span></div><div class="l">cost savings delivered fleet-wide</div></div>
       <div class="stat"><div class="n">~2,500<span class="accent">/mo</span></div><div class="l">devices fulfilled, peaking at 1,000/wk</div></div>
-      <div class="stat"><div class="n">$1&ndash;5M</div><div class="l">device inventory managed</div></div>
+      <div class="stat"><div class="n">$3.2M</div><div class="l">device inventory managed</div></div>
     </div>
   </div>
 </header>
@@ -432,41 +432,6 @@
       <article class="card">
         <div class="card-top">
           <div>
-            <h3>Argus</h3>
-            <span class="url">fully-local AI home monitor · still in testing</span>
-          </div>
-          <span class="badge">in testing</span>
-        </div>
-        <dl class="frame">
-          <div>
-            <dt>Problem</dt>
-            <dd>Home monitoring and face recognition that stay on your own hardware. No cloud.</dd>
-          </div>
-          <div>
-            <dt>Built</dt>
-            <dd>Three cooperating services. A <strong>Watcher</strong> that snapshots the home's state every few minutes and asks an LLM "is anything actually wrong?" (a hardened, high-signal prompt with an urgent-push vs. daily-digest policy). A <strong>Recognizer</strong> that uses InsightFace on CPU and exposes a CodeProject.AI-compatible API to detect and identify faces on-device. A <strong>Console</strong> that clusters unknown faces by similarity so you name a group once and it learns that person from then on.</dd>
-          </div>
-          <div>
-            <dt>Impact</dt>
-            <dd>Still in testing. Fully local by design. Pure logic is unit-tested. The container and glue layers are dry-run-verified.</dd>
-          </div>
-        </dl>
-        <div class="stack">
-          <span class="tag">Python</span>
-          <span class="tag">LLM reasoning loop</span>
-          <span class="tag">InsightFace</span>
-          <span class="tag">On-device / CPU inference</span>
-          <span class="tag">Face recognition</span>
-          <span class="tag">Home Assistant · AppDaemon</span>
-          <span class="tag">Docker / Compose</span>
-          <span class="tag">Flask API</span>
-          <span class="tag">Pytest</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-top">
-          <div>
             <h3>gutter.guru</h3>
             <span class="url"><a href="https://gutter.guru" target="_blank" rel="noopener noreferrer">gutter.guru ↗</a></span>
           </div>
@@ -509,7 +474,7 @@
         <p>
           I lead technical teams and build the systems that help them move faster. My background is hands-on
           electronics, and most of my work has been keeping high-volume repair operations running, coordinating
-          fulfillment, managing a few million dollars of inventory, and writing the internal tools that cut cost
+          fulfillment, managing $3.2M of inventory, and writing the internal tools that cut cost
           and keep things reliable.
         </p>
         <p>
@@ -530,7 +495,7 @@
         </p>
         <dl class="kv">
           <dt>now</dt><dd>Lead, US Workshop Operations @ KRUU US Inc</dd>
-          <dt>building</dt><dd>KRUU warehouse planner, HomeForge (web + iOS), Argus, gutter.guru</dd>
+          <dt>building</dt><dd>KRUU warehouse planner, HomeForge (web + iOS), gutter.guru</dd>
           <dt>background</dt><dd>U.S. Navy avionics (AT2) · Six Sigma · Secret clearance (inactive)</dd>
           <dt>stack</dt><dd>Python · TypeScript / React · three.js · LLMs, agents &amp; MCP · local models · Docker · Supabase / Postgres · Firebase · Vercel · iOS · Raspberry Pi · networking</dd>
         </dl>
